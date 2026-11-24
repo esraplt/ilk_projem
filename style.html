@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkileşimli Ürün Kartı</title>
+    
+    <!-- Google Fonts Bağlantıları -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Kodları (Aynı sayfada <style> etiketi içinde) -->
+    <style>
+        /* Sayfanın genel ayarları ve kartı ortalamak için */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Ürün Kartının Stilleri */
+        .product-card {
+            width: 320px;
+            background-color: white;
+            border-radius: 15px; /* Modern bir görünüm için köşeleri yuvarlatalım */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Başlangıçta hafif bir gölge */
+            overflow: hidden; /* Resmin yuvarlak köşelerden taşmasını engeller */
+            
+            /* SİHİRLİ KISIM: transition */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* 2. FARE KARTIN ÜZERİNE GELDİĞİNDEKİ DURUM (:hover) */
+        .product-card:hover {
+            /* Kartı 10 piksel yukarı kaldır */
+            transform: translateY(-10px);
+            /* Gölgeyi daha belirgin hale getirerek "kalkma" hissini güçlendir */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Kartın İçeriğinin Stilleri */
+        .product-card img {
+            width: 100%;
+            display: block; /* Resmin altındaki istenmeyen boşluğu kaldırır */
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .card-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-card">
+        <img src="https://picsum.photos/id/1025/400/250" alt="Sevimli Köpek">
+        <div class="card-content">
+            <h3>Premium Evcil Hayvan Maması</h3>
+            <p>Dostunuzun sağlığı için en kaliteli ve doğal malzemelerle üretilmiştir.</p>
+            <a href="#" class="card-button">Sepete Ekle</a>
+        </div>
+    </div>
+
+</body>
+</html>
